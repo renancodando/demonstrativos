@@ -1,5 +1,14 @@
 # Mi Tech Jaú · 4 demonstrativos RNCWeb
 
+**Apresentação publicada:** https://mitech-jau-demonstrativos.vercel.app/
+
+**Cada modelo:**
+- https://mitech-jau-demonstrativos.vercel.app/?demo=1
+- https://mitech-jau-demonstrativos.vercel.app/?demo=2
+- https://mitech-jau-demonstrativos.vercel.app/?demo=3
+- https://mitech-jau-demonstrativos.vercel.app/?demo=4
+
+
 Quatro propostas de site para a Mi Tech Celular — Loja 1, em Jaú/SP, prontas para apresentação com um link próprio.
 
 **Empresa:** Mi Tech Celular — Assistência Técnica em Celulares (Loja 1), Rua Lourenço Prado, 364, Centro, Jaú/SP, CEP 17201-000.
@@ -35,3 +44,9 @@ A versão CSCell carrega a ilustração original de celular do repositório púb
 Informações da empresa referenciadas pelo perfil público Mi Tech Celular — Loja 1 (Google Maps). Confirmar dados e serviços com a empresa antes de usar em produção comercial.
 
 Projeto desenvolvido pela RNCWeb.
+
+## Publicação independente
+
+Projeto Vercel: `mitech-jau-demonstrativos`. Criado e publicado diretamente pela API da Vercel, com deploy de produção confirmado como `READY`. O repositório GitHub e o link pertencem exclusivamente aos demonstrativos da Mi Tech Jaú; as outras apresentações permanecem separadas.
+
+A conexão automática GitHub → Vercel **ainda não foi configurada**. Mudanças futuras no repositório não entram automaticamente no ar até conectar o GitHub ao projeto Vercel.
