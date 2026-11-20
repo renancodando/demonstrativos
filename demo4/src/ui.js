@@ -1,5 +1,5 @@
 // Interface em HTML: ordem de serviço (navegação) e pedido de orçamento.
-const WHATSAPP = '5514998901897'; // trocar pelo número real da loja
+const WHATSAPP = '5577981335884'; // trocar pelo número real da loja
 
 export function initUI() {
   const steps = [...document.querySelectorAll('.os li')];
@@ -21,7 +21,7 @@ export function initUI() {
         return;
       }
       err.textContent = '';
-      const msg = `Olá, Mi Tech Jaú! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
+      const msg = `Olá, ApacheTech! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   }
