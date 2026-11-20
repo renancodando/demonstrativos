@@ -45,6 +45,6 @@ O projeto é publicado pela API da Vercel; o GitHub ainda não está conectado a
 
 ## Escopo de alterações
 
-Esta migração **substitui somente a marca Mi Tech Jaú no repositório `renancodando/demonstrativos`** por ApacheTech. O projeto separado `renancodando/rncweb` (Gtechservice) e os cadastros comerciais do Órbita CRM não devem ser alterados.
+A apresentação deste repositório é dedicada exclusivamente à ApacheTech; não interfere na negociação de outras empresas. O projeto separado `renancodando/rncweb` (Gtechservice) e os cadastros comerciais do Órbita CRM não devem ser alterados.
 
 © RNCWeb · Demonstrações conceituais, sujeitas à aprovação da empresa.
