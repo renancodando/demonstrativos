@@ -2,7 +2,7 @@
 (() => {
   'use strict';
 
-  const PHONE_NUMBER = '5514998901897'; // Contato público da Mi Tech Celular (Loja 1) em Jaú.
+  const PHONE_NUMBER = '5577981335884'; // Contato público da ApacheTech em Vitória da Conquista.
   const views = {
     home: document.getElementById('chooser'),
     '1': document.getElementById('demo-one'),
@@ -42,8 +42,8 @@
     if (selectedFrame && !selectedFrame.getAttribute('src')) selectedFrame.src = selectedFrame.dataset.src;
     document.body.dataset.view = view;
     document.title = view === 'home'
-      ? 'Mi Tech Jaú | Demonstrações RNCWeb'
-      : 'Mi Tech Jaú | Demonstrativo ' + view + ' — RNCWeb';
+      ? 'ApacheTech | Demonstrações RNCWeb'
+      : 'ApacheTech | Demonstrativo ' + view + ' — RNCWeb';
 
     document.querySelectorAll('.toolbar-tab').forEach(button => {
       const selected = button.dataset.go === view;
@@ -137,7 +137,7 @@
     const details = detailsField.value.trim();
 
     const message = [
-      'Olá, Mi Tech Jaú! Encontrei a loja pelo site e gostaria de mais informações.',
+      'Olá, ApacheTech! Encontrei a loja pelo site e gostaria de mais informações.',
       '',
       'Assunto: ' + service,
       device ? 'Aparelho: ' + device : '',
