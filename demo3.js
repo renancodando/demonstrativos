@@ -4,7 +4,7 @@
 
   // Preencha com o WhatsApp da loja: país + DDD + número, só dígitos (ex.: '5528999990000').
   // Enquanto estiver vazio, o WhatsApp abre com a mensagem pronta e pede para escolher o contato.
-  const CONFIG = { whatsapp: '5514998901897' };
+  const CONFIG = { whatsapp: '5577981335884' };
 
   const GREEN = '#00c566';
   const LINE = '#dde1e6';
@@ -227,7 +227,7 @@
     const failed = names('falha'), passed = names('ok');
     if (!d.aparelho && !d.defeitos.length && !d.detalhes && !d.nome && !failed.length && !passed.length) return '';
 
-    const lines = [`Olá, Mi Tech Jaú!${d.nome ? ` Meu nome é ${d.nome}.` : ''}`];
+    const lines = [`Olá, ApacheTech!${d.nome ? ` Meu nome é ${d.nome}.` : ''}`];
     lines.push(d.aparelho ? `Quero um orçamento para o meu ${d.aparelho}.` : 'Quero um orçamento para o meu celular.');
     if (d.defeitos.length) {
       lines.push('', 'O que está acontecendo:');
