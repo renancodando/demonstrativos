@@ -1,35 +1,35 @@
-# Mi Tech Jaú · 4 demonstrativos RNCWeb
+# ApacheTech · Quatro demonstrativos RNCWeb
 
-**Apresentação publicada:** https://mitech-jau-demonstrativos.vercel.app/
+Apresentação independente de **quatro modelos de site para a ApacheTech**, assistência técnica de celulares no bairro Ibirapuera, em Vitória da Conquista (BA).
+
+**Link de apresentação:** https://apachetech-demonstrativos.vercel.app/
 
 **Cada modelo:**
-- https://mitech-jau-demonstrativos.vercel.app/?demo=1
-- https://mitech-jau-demonstrativos.vercel.app/?demo=2
-- https://mitech-jau-demonstrativos.vercel.app/?demo=3
-- https://mitech-jau-demonstrativos.vercel.app/?demo=4
+- https://apachetech-demonstrativos.vercel.app/?demo=1 — Institucional claro
+- https://apachetech-demonstrativos.vercel.app/?demo=2 — CSCell escuro/interativo
+- https://apachetech-demonstrativos.vercel.app/?demo=3 — Esqueleto com testes e orçamento
+- https://apachetech-demonstrativos.vercel.app/?demo=4 — Técnica Alpha com bancada 3D
 
+## Dados públicos utilizados
 
-Quatro propostas de site para a Mi Tech Celular — Loja 1, em Jaú/SP, prontas para apresentação com um link próprio.
+- **Empresa:** ApacheTech — assistência técnica de celulares
+- **Endereço:** Av. Rondônia, 697C, Ibirapuera, Vitória da Conquista/BA, CEP 45075-270, Brasil
+- **Telefone/WhatsApp:** (77) 98133-5884 — https://wa.me/5577981335884
+- **Atendimento:** segunda a sexta 08h30–18h30; sábado 08h30–12h; domingo fechado
+- **Google Maps:** https://www.google.com/maps/search/?api=1&query=ApacheTech%20Vit%C3%B3ria%20da%20Conquista%20BA
+- **Fonte adicional:** https://www.santoguia.com.br/vitoria-da-conquista-ba/conserto-de-celular
 
-**Empresa:** Mi Tech Celular — Assistência Técnica em Celulares (Loja 1), Rua Lourenço Prado, 364, Centro, Jaú/SP, CEP 17201-000.
-**Contato público:** (14) 99890-1897 · WhatsApp https://wa.me/5514998901897
-**Instagram:** https://www.instagram.com/mitech_jau/
-**Horário informado:** segunda a sexta, 08h–18h; sábado, 08h–17h; domingo fechado.
+As informações públicas devem ser confirmadas com a empresa antes de uso comercial definitivo. Instagram não foi incluído por falta de identificação oficial verificada. Diagnóstico, reparos, garantia, disponibilidade e valores ficam sob consulta; não há promessa de orçamento, resultados de SEO ou atendimento imediato. Esta é uma **demonstração produzida pela RNCWeb**, não o site oficial da empresa.
 
-As atividades apresentadas incluem diagnóstico, manutenção e reparos de celulares, sempre com preços, prazos, garantia, peças e serviços específicos sob consulta. Estas páginas são demonstrações conceituais da RNCWeb e não se apresentam como site oficial.
+## Sobre os modelos
 
-## Quatro modelos
+Os quatro demonstrativos são **cópias independentes** dos modelos usados no projeto da Gtechservice, com personalização específica e URLs separadas. Nada é carregado do repositório da Gtechservice.
 
-1. Tradicional: `/?demo=1` — site institucional claro com serviços, localização, avaliações e formulário para WhatsApp.
-2. CSCell: `/?demo=2` — identidade escura e vermelha, interações e efeitos do projeto CSCell, com a marca Mi Tech Jaú.
-3. Esqueleto: `/?demo=3` — grade interativa, testes opcionais do celular (toque, pixels, som, vibração e bateria) e orçamento.
-4. Técnica Alpha: `/?demo=4` — bancada e smartphone em 3D com Three.js, rolagem cinematográfica e formulário para WhatsApp.
+O quarto modelo possui uma bancada 3D com Three.js e animações de rolagem; o terceiro inclui testes interativos do aparelho. O segundo adapta o modelo CSCell. Todos oferecem informações de contato, localização e formulário que prepara mensagem de WhatsApp.
 
-As quatro versões estão incluídas neste repositório, separadas de quaisquer outros projetos para outros clientes.
+## Rodar e publicar
 
-## Compilar e publicar
-
-Requer Node.js 22 ou superior.
+Node.js 22 ou superior:
 
 ```bash
 npm install
@@ -37,16 +37,14 @@ npm run build
 npx serve dist
 ```
 
-Configuração Vercel: `npm install`; `npm run build`; diretório de saída `dist`; Node 22.x.
+Vercel: comando de instalação `npm install`, compilação `npm run build`, diretório publicado `dist`.
 
-A versão CSCell carrega a ilustração original de celular do repositório público `renancodando/sonotechcell`. Os demais arquivos estão armazenados neste repositório; o modelo 3D é compilado localmente pelo Vite.
+**Projeto Vercel:** `apachetech-demonstrativos`.
 
-Informações da empresa referenciadas pelo perfil público Mi Tech Celular — Loja 1 (Google Maps). Confirmar dados e serviços com a empresa antes de usar em produção comercial.
+O projeto é publicado pela API da Vercel; o GitHub ainda não está conectado a deploy automático. Alterar o código não publica nova versão sem executar outro deploy.
 
-Projeto desenvolvido pela RNCWeb.
+## Escopo de alterações
 
-## Publicação independente
+Esta migração **substitui somente a marca Mi Tech Jaú no repositório `renancodando/demonstrativos`** por ApacheTech. O projeto separado `renancodando/rncweb` (Gtechservice) e os cadastros comerciais do Órbita CRM não devem ser alterados.
 
-Projeto Vercel: `mitech-jau-demonstrativos`. Criado e publicado diretamente pela API da Vercel, com deploy de produção confirmado como `READY`. O repositório GitHub e o link pertencem exclusivamente aos demonstrativos da Mi Tech Jaú; as outras apresentações permanecem separadas.
-
-A conexão automática GitHub → Vercel **ainda não foi configurada**. Mudanças futuras no repositório não entram automaticamente no ar até conectar o GitHub ao projeto Vercel.
+© RNCWeb · Demonstrações conceituais, sujeitas à aprovação da empresa.
