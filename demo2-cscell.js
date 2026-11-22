@@ -2,34 +2,26 @@
 
 // Static site: contact and location work without a backend or database.
 const business = {
-  name: 'ApacheTech',
-  whatsapp: '5577981335884',
-  phone: '(77) 98133-5884',
-  address: 'Av. Rondônia, 697C, Ibirapuera, Vitória da Conquista - SP, 45075-270, Brasil',
-  mapAddress: 'Av. Rondônia, 697C, Ibirapuera, Vitória da Conquista - SP, 45075-270, Brasil',
+  name: 'uaiphone',
+  whatsapp: '5599984729862',
+  phone: '(99) 98472-9862',
+  address: 'Endereço sob consulta pelo WhatsApp',
+  mapAddress: 'Endereço sob consulta pelo WhatsApp',
   timeZone: 'America/Sao_Paulo'
 };
 const mapsQuery = encodeURIComponent(business.mapAddress);
 document.querySelectorAll('[data-map-route]').forEach(link => {
-  link.href = `https://www.google.com/maps/dir/?api=1&destination=${mapsQuery}`;
+  link.href = 'https://wa.me/5599984729862';
 });
 document.querySelector('.contact-number').href = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Olá, ${business.name}! Gostaria de informações sobre os serviços.`)}`;
 
-function updateBusinessHours(now = new Date()) {
-  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
-    timeZone: business.timeZone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
-  }).formatToParts(now).map(part => [part.type, part.value]));
-  const minutes = Number(parts.hour) * 60 + Number(parts.minute);
-  const closing = parts.weekday === 'Sat' ? 12 * 60 : 18 * 60 + 30;
-  const open = parts.weekday !== 'Sun' && minutes >= 8 * 60 + 30 && minutes < closing;
+function updateBusinessHours() {
   document.querySelectorAll('[data-business-status]').forEach(status => {
-    status.classList.toggle('is-open', open);
-    status.textContent = open ? `Dentro do horário de atendimento · até ${Math.floor(closing / 60)}h${closing % 60 ? '30' : ''}` : 'Fora do horário de atendimento';
+    status.classList.remove('is-open');
+    status.textContent = 'Horários sob consulta. Confirme com a equipe pelo WhatsApp.';
   });
 }
 updateBusinessHours();
-setInterval(updateBusinessHours, 60_000);
-document.addEventListener('visibilitychange', () => { if (!document.hidden) updateBusinessHours(); });
 
 async function copyText(text, scope) {
   const feedback = scope.querySelector('[data-copy-feedback]');
@@ -149,7 +141,7 @@ function showDetail(data, trigger, location = false) {
   document.querySelector('#detail-eyebrow').textContent = location ? 'ESTAMOS ESPERANDO POR VOCÊ' : 'ASSISTÊNCIA ESPECIALIZADA';
   if (location) {
     const map = document.querySelector('.location-map');
-    if (!map.hasAttribute('src')) map.src = `https://www.google.com/maps?q=${mapsQuery}&output=embed`;
+    if (map) map.hidden = true;
     updateBusinessHours();
   }
   openDialog('detail-dialog', trigger);
@@ -170,7 +162,7 @@ document.querySelectorAll('[data-open]').forEach(button => button.addEventListen
   const action = button.dataset.open;
   if (action === 'location') {
     selectedService = '';
-    showDetail({ title: 'Encontre a ApacheTech', description: 'Atendimento e assistência técnica de celulares em Vitória da Conquista, BA. Consulte os horários antes de sair.', icon: 'pin' }, button, true);
+    showDetail({ title: 'Localização da uaiphone', description: 'Confirme o endereço e o horário pelo WhatsApp antes de visitar a loja.', icon: 'pin' }, button, true);
     return;
   }
   if (action === 'diagnosis') {
@@ -215,7 +207,7 @@ form.addEventListener('submit', event => {
   feedback.querySelector('.manual-copy')?.remove();
   feedback.hidden = false;
   window.open(url, '_blank', 'noopener,noreferrer');
-  form.dispatchEvent(new CustomEvent('apachetech:diagnosis', { bubbles: true, detail: data }));
+  form.dispatchEvent(new CustomEvent('uaiphone:diagnosis', { bubbles: true, detail: data }));
   feedback.scrollIntoView({ block: 'nearest', behavior: 'auto' });
 });
 form.addEventListener('input', event => {
