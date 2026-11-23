@@ -1,5 +1,5 @@
 // Interface em HTML: ordem de serviço (navegação) e pedido de orçamento.
-const WHATSAPP = '5549999172868'; // trocar pelo número real da loja
+const WHATSAPP = ''; // trocar pelo número real da loja
 
 export function initUI() {
   const steps = [...document.querySelectorAll('.os li')];
@@ -21,8 +21,9 @@ export function initUI() {
         return;
       }
       err.textContent = '';
-      const msg = `Olá, EJP Informática & Celulares! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
-      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+      const msg = `Olá, Francisco Assistência Técnica de Celulares! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
+      if (WHATSAPP) window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+      else err.textContent = 'Mensagem preparada. O WhatsApp da empresa ainda não está configurado.';
     });
   }
 

@@ -2,18 +2,18 @@
 
 // Static site: contact and location work without a backend or database.
 const business = {
-  name: 'EJP Informática & Celulares',
-  whatsapp: '5549999172868',
-  phone: '(49) 99917-2868',
-  address: 'Av. Brasil, 568 — São Cristóvão, Lages - SC',
-  mapAddress: 'Av. Brasil, 568 — São Cristóvão, Lages - SC',
+  name: 'Francisco Assistência Técnica de Celulares',
+  whatsapp: '',
+  phone: 'WhatsApp a confirmar',
+  address: 'Endereço a confirmar com a empresa',
+  mapAddress: 'Endereço a confirmar com a empresa',
   timeZone: 'America/Sao_Paulo'
 };
 const mapsQuery = encodeURIComponent(business.mapAddress);
 document.querySelectorAll('[data-map-route]').forEach(link => {
-  link.href = 'https://www.google.com/maps/search/?api=1&query=' + mapsQuery;
+  link.href = business.whatsapp ? 'https://www.google.com/maps/search/?api=1&query=' + mapsQuery : '#localizacao';
 });
-document.querySelector('.contact-number').href = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Olá, ${business.name}! Gostaria de informações sobre os serviços.`)}`;
+document.querySelector('.contact-number').href = business.whatsapp ? `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Olá, ${business.name}! Gostaria de informações sobre os serviços.`)}` : '#diagnosis-form';
 
 function updateBusinessHours() {
   document.querySelectorAll('[data-business-status]').forEach(status => {
@@ -162,7 +162,7 @@ document.querySelectorAll('[data-open]').forEach(button => button.addEventListen
   const action = button.dataset.open;
   if (action === 'location') {
     selectedService = '';
-    showDetail({ title: 'Localização da EJP Informática & Celulares', description: 'Estamos na Av. Brasil, 568, em Lages (SC). Confirme o horário antes de visitar.', icon: 'pin' }, button, true);
+    showDetail({ title: 'Localização a confirmar', description: 'O endereço e o horário de atendimento serão informados pela empresa.', icon: 'pin' }, button, true);
     return;
   }
   if (action === 'diagnosis') {
@@ -199,15 +199,16 @@ form.addEventListener('submit', event => {
     `Problema: ${data.description}`, '',
     'Podem me informar sobre o orçamento e o prazo de atendimento?'
   ].join('\n');
-  const url = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(preparedMessage)}`;
+  const url = business.whatsapp ? `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(preparedMessage)}` : '';
   const feedback = document.querySelector('.form-feedback');
-  feedback.querySelector('.message-status').textContent = 'Mensagem preparada. Confirme o envio no WhatsApp. Se a conversa não abriu, use o link abaixo.';
-  feedback.querySelector('.message-link').href = url;
+  feedback.querySelector('.message-status').textContent = url ? 'Mensagem preparada. Confirme o envio no WhatsApp.' : 'Mensagem preparada. WhatsApp ainda não configurado; você pode copiar a solicitação.';
+  feedback.querySelector('.message-link').href = url || '#diagnosis-form';
+  feedback.querySelector('.message-link').hidden = !url;
   feedback.querySelector('[data-copy-feedback]').textContent = '';
   feedback.querySelector('.manual-copy')?.remove();
   feedback.hidden = false;
-  window.open(url, '_blank', 'noopener,noreferrer');
-  form.dispatchEvent(new CustomEvent('EJP Informática & Celulares:diagnosis', { bubbles: true, detail: data }));
+  if (url) window.open(url, '_blank', 'noopener,noreferrer');
+  form.dispatchEvent(new CustomEvent('Francisco Assistência Técnica de Celulares:diagnosis', { bubbles: true, detail: data }));
   feedback.scrollIntoView({ block: 'nearest', behavior: 'auto' });
 });
 form.addEventListener('input', event => {

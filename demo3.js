@@ -4,7 +4,7 @@
 
   // Preencha com o WhatsApp da loja: país + DDD + número, só dígitos (ex.: '5528999990000').
   // Enquanto estiver vazio, o WhatsApp abre com a mensagem pronta e pede para escolher o contato.
-  const CONFIG = { whatsapp: '5549999172868' };
+  const CONFIG = { whatsapp: '' };
 
   const GREEN = '#00c566';
   const LINE = '#dde1e6';
@@ -227,7 +227,7 @@
     const failed = names('falha'), passed = names('ok');
     if (!d.aparelho && !d.defeitos.length && !d.detalhes && !d.nome && !failed.length && !passed.length) return '';
 
-    const lines = [`Olá, EJP Informática & Celulares!${d.nome ? ` Meu nome é ${d.nome}.` : ''}`];
+    const lines = [`Olá, Francisco Assistência Técnica de Celulares!${d.nome ? ` Meu nome é ${d.nome}.` : ''}`];
     lines.push(d.aparelho ? `Quero um orçamento para o meu ${d.aparelho}.` : 'Quero um orçamento para o meu celular.');
     if (d.defeitos.length) {
       lines.push('', 'O que está acontecendo:');
@@ -295,7 +295,8 @@
     const text = validMessage();
     if (!text) return;
     // sem número configurado, o WhatsApp abre e pede para escolher o contato
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    if (CONFIG.whatsapp) window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    else window.alert('Mensagem preparada. O WhatsApp da empresa será ativado após confirmação do número. Você pode copiar a mensagem.');
   });
   copyBtn.addEventListener('click', async () => {
     const text = validMessage();
