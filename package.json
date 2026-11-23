@@ -1,9 +1,9 @@
 {
-  "name": "rncweb-uaiphone-demonstrativos",
+  "name": "rncweb-ejp-demonstrativos",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Quatro modelos de site para uaiphone",
+  "description": "Cinco modelos de site para EJP Informática & Celulares",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "vite --host 0.0.0.0 --port 5173"

@@ -8,7 +8,8 @@
     '1': document.getElementById('demo-one'),
     '2': document.getElementById('demo-two'),
     '3': document.getElementById('demo-three'),
-    '4': document.getElementById('demo-four')
+    '4': document.getElementById('demo-four'),
+    '5': document.getElementById('demo-five')
   };
   const toolbar = document.getElementById('demo-toolbar');
   const quoteDialog = document.getElementById('quote-dialog');
@@ -22,7 +23,7 @@
 
   function viewFromUrl() {
     const v = new URL(window.location.href).searchParams.get('demo');
-    return ['1','2','3','4'].includes(v) ? v : 'home';
+    return ['1','2','3','4','5'].includes(v) ? v : 'home';
   }
 
   function buildUrl(view) {

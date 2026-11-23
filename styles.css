@@ -79,3 +79,20 @@
 
 /* RNCWEB — identidade EJP */
 .apache-name{min-width:0}.apache-name small{letter-spacing:.07em;font-size:clamp(7px,.7vw,9px)}.chooser-hero h1 em{overflow-wrap:anywhere}.light-hero-copy h1 span{overflow-wrap:anywhere}
+
+/* RNCWEB · quinto demonstrativo */
+.choose-card.choose-neon{background:#121b23}
+.neon-preview{background:#05090d;color:#f2f4f5;padding:17px 20px;isolation:isolate}
+.neon-preview:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 90%,#0ddbf021,transparent 45%),radial-gradient(ellipse at 35% 110%,#ff750b17,transparent 55%);pointer-events:none}
+.neon-preview-top{display:flex;align-items:start;justify-content:space-between;position:relative;z-index:2;gap:8px}
+.neon-preview-brand{display:flex;flex-direction:column;font-size:22px;line-height:1.05;font-weight:950;color:#ff8b2d;font-style:italic;letter-spacing:-.07em}
+.neon-preview-brand small{font-style:normal;color:#d8dfe2;font-size:6px;letter-spacing:1.2px;margin-top:5px}
+.neon-preview-status{font-size:9px;border:1px solid #22bbc152;border-radius:30px;padding:6px 9px;white-space:nowrap}
+.neon-preview-status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#16d77b;box-shadow:0 0 8px #16d77b;margin-right:3px}
+.neon-preview-title{position:absolute;z-index:2;left:20px;top:70px;font-size:25px;font-weight:900;line-height:1.02;letter-spacing:-.8px;text-shadow:0 2px 12px #000}
+.neon-preview-title em{font-style:italic;color:#ff7529}
+.neon-preview-cta{position:absolute;bottom:24px;left:20px;z-index:2;background:linear-gradient(#ff9b4e,#f06d17);color:#fff;padding:10px 15px;border-radius:30px;font-size:10px;font-weight:750;box-shadow:0 2px 24px #ff752947}
+.neon-preview-cta b{padding-left:10px}
+.neon-preview-image{position:absolute;width:70%;height:90%;right:-15%;bottom:-10%;background:url('./demo5/arte/cena-movel.webp') center/contain no-repeat;filter:drop-shadow(0 0 13px #10ecf322);pointer-events:none;z-index:1}
+.choose-action.neon-action{background:linear-gradient(95deg,#fb7821,#ffae50);color:#1e120a}
+@media(max-width:740px){.demo-toolbar{flex-wrap:wrap;justify-content:center;gap:2px;padding:4px 9px}.toolbar-home{font-size:13px}.toolbar-actions{width:100%;justify-content:flex-start;overflow-x:auto;scrollbar-width:thin;padding:4px 1px}.toolbar-tab{flex-shrink:0}.toolbar-share{flex-shrink:0}.embedded-demo{height:calc(100dvh - 94px);min-height:350px}}

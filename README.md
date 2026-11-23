@@ -1,13 +1,14 @@
-# EJP Informática & Celulares · Quatro demonstrativos RNCWEB
+# EJP Informática & Celulares · Cinco demonstrativos RNCWEB
 
-Apresentação independente de quatro conceitos de site para a EJP Informática & Celulares, preparada pela RNCWEB.
+Apresentação independente de cinco conceitos de site para a EJP Informática & Celulares, preparada pela RNCWEB.
 
-**Apresentação (endereço temporário):** https://EJP Informática & Celulares-demonstrativos.vercel.app/
+**Apresentação (endereço temporário):** https://ejp-informatica-celulares.vercel.app/
 
-- Modelo 1 — Institucional claro: https://EJP Informática & Celulares-demonstrativos.vercel.app/?demo=1
-- Modelo 2 — Escuro e interativo: https://EJP Informática & Celulares-demonstrativos.vercel.app/?demo=2
-- Modelo 3 — Testes interativos e orçamento: https://EJP Informática & Celulares-demonstrativos.vercel.app/?demo=3
-- Modelo 4 — Bancada 3D: https://EJP Informática & Celulares-demonstrativos.vercel.app/?demo=4
+- Modelo 1 — Institucional claro: https://ejp-informatica-celulares.vercel.app/?demo=1
+- Modelo 2 — Escuro e interativo: https://ejp-informatica-celulares.vercel.app/?demo=2
+- Modelo 3 — Testes interativos e orçamento: https://ejp-informatica-celulares.vercel.app/?demo=3
+- Modelo 4 — Bancada 3D: https://ejp-informatica-celulares.vercel.app/?demo=4
+- Modelo 5 — Neon técnico (catálogo RNCWEB): https://ejp-informatica-celulares.vercel.app/?demo=5
 
 ## Contato e dados da empresa
 
@@ -24,8 +25,10 @@ npm install
 npm run build
 ```
 
-O resultado está na pasta `dist/` e inclui as quatro demonstrações. O projeto Vercel atual exige publicação explícita, pois não está integrado ao GitHub para deploy automático.
+O resultado está na pasta `dist/` e inclui as cinco demonstrações. O projeto Vercel atual exige publicação explícita, pois não está integrado ao GitHub para deploy automático.
 
 © RNCWEB · Demonstrativos sujeitos à aprovação da empresa.
 
 Dados de contato e endereço consultados em listagens públicas. Confirmar com a empresa antes da entrega final.
+
+Modelo 5: HTML, CSS, JavaScript, recursos visuais e fontes incorporados de `renancodando/catalogo/demos/assistencia-tecnica`. Funciona sem depender do catálogo hospedado.

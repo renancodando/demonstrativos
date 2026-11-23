@@ -1,5 +1,5 @@
 import { build } from 'vite';
-import { copyFile, mkdir, stat } from 'node:fs/promises';
+import { copyFile, mkdir, stat, cp } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = process.cwd();
@@ -36,4 +36,5 @@ for (const name of staticFiles) {
   await copyFile(path.join(root, name), path.join(dist, name));
 }
 // A névoa SVG original está embutida no CSS e não requer pasta assets.
-console.log('RNCWeb: 4 demonstrativos compilados em dist/.');
+await cp(path.join(root, 'demo5'), path.join(dist, 'demo5'), { recursive: true });
+console.log('RNCWeb: 5 demonstrativos compilados em dist/.');
