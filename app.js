@@ -2,7 +2,7 @@
 (() => {
   'use strict';
 
-  const PHONE_NUMBER = '5599984729862'; // WhatsApp informado pela uaiphone.
+  const PHONE_NUMBER = '5549999172868'; // WhatsApp informado pela EJP Informática & Celulares.
   const views = {
     home: document.getElementById('chooser'),
     '1': document.getElementById('demo-one'),
@@ -42,8 +42,8 @@
     if (selectedFrame && !selectedFrame.getAttribute('src')) selectedFrame.src = selectedFrame.dataset.src;
     document.body.dataset.view = view;
     document.title = view === 'home'
-      ? 'uaiphone | Demonstrações RNCWeb'
-      : 'uaiphone | Demonstrativo ' + view + ' — RNCWeb';
+      ? 'EJP Informática & Celulares | Demonstrações RNCWeb'
+      : 'EJP Informática & Celulares | Demonstrativo ' + view + ' — RNCWeb';
 
     document.querySelectorAll('.toolbar-tab').forEach(button => {
       const selected = button.dataset.go === view;
@@ -137,7 +137,7 @@
     const details = detailsField.value.trim();
 
     const message = [
-      'Olá, uaiphone! Encontrei a loja pelo site e gostaria de mais informações.',
+      'Olá, EJP Informática & Celulares! Encontrei a loja pelo site e gostaria de mais informações.',
       '',
       'Assunto: ' + service,
       device ? 'Aparelho: ' + device : '',

@@ -1,5 +1,5 @@
 // Interface em HTML: ordem de serviço (navegação) e pedido de orçamento.
-const WHATSAPP = '5599984729862'; // trocar pelo número real da loja
+const WHATSAPP = '5549999172868'; // trocar pelo número real da loja
 
 export function initUI() {
   const steps = [...document.querySelectorAll('.os li')];
@@ -21,7 +21,7 @@ export function initUI() {
         return;
       }
       err.textContent = '';
-      const msg = `Olá, uaiphone! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
+      const msg = `Olá, EJP Informática & Celulares! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   }

@@ -95,3 +95,6 @@
 /* Mantém a composição original do CSCell, ajustando apenas o comprimento da marca. */
 .brand-type{font-size:clamp(20px,2.2vw,29px)}
 @media(max-width:640px){.brand-type{font-size:23px}}
+
+/* RNCWEB — identidade EJP */
+.brand-type small{letter-spacing:.08em;white-space:normal;font-size:clamp(7px,.7vw,10px)}

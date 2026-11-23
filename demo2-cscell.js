@@ -2,16 +2,16 @@
 
 // Static site: contact and location work without a backend or database.
 const business = {
-  name: 'uaiphone',
-  whatsapp: '5599984729862',
-  phone: '(99) 98472-9862',
-  address: 'Endereço sob consulta pelo WhatsApp',
-  mapAddress: 'Endereço sob consulta pelo WhatsApp',
+  name: 'EJP Informática & Celulares',
+  whatsapp: '5549999172868',
+  phone: '(49) 99917-2868',
+  address: 'Av. Brasil, 568 — São Cristóvão, Lages - SC',
+  mapAddress: 'Av. Brasil, 568 — São Cristóvão, Lages - SC',
   timeZone: 'America/Sao_Paulo'
 };
 const mapsQuery = encodeURIComponent(business.mapAddress);
 document.querySelectorAll('[data-map-route]').forEach(link => {
-  link.href = 'https://wa.me/5599984729862';
+  link.href = 'https://www.google.com/maps/search/?api=1&query=' + mapsQuery;
 });
 document.querySelector('.contact-number').href = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Olá, ${business.name}! Gostaria de informações sobre os serviços.`)}`;
 
@@ -162,7 +162,7 @@ document.querySelectorAll('[data-open]').forEach(button => button.addEventListen
   const action = button.dataset.open;
   if (action === 'location') {
     selectedService = '';
-    showDetail({ title: 'Localização da uaiphone', description: 'Confirme o endereço e o horário pelo WhatsApp antes de visitar a loja.', icon: 'pin' }, button, true);
+    showDetail({ title: 'Localização da EJP Informática & Celulares', description: 'Estamos na Av. Brasil, 568, em Lages (SC). Confirme o horário antes de visitar.', icon: 'pin' }, button, true);
     return;
   }
   if (action === 'diagnosis') {
@@ -207,7 +207,7 @@ form.addEventListener('submit', event => {
   feedback.querySelector('.manual-copy')?.remove();
   feedback.hidden = false;
   window.open(url, '_blank', 'noopener,noreferrer');
-  form.dispatchEvent(new CustomEvent('uaiphone:diagnosis', { bubbles: true, detail: data }));
+  form.dispatchEvent(new CustomEvent('EJP Informática & Celulares:diagnosis', { bubbles: true, detail: data }));
   feedback.scrollIntoView({ block: 'nearest', behavior: 'auto' });
 });
 form.addEventListener('input', event => {
