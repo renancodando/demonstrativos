@@ -21,7 +21,7 @@ export function initUI() {
         return;
       }
       err.textContent = '';
-      const msg = `Olá, Francisco Assistência Técnica de Celulares! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
+      const msg = `Olá, Master Tech - Conserto de Celular! ${nome ? `Meu nome é ${nome}. ` : ''}Quero um orçamento para um ${modelo}. Problema: ${defeito}.`;
       if (WHATSAPP) window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
       else err.textContent = 'Mensagem preparada. O WhatsApp da empresa ainda não está configurado.';
     });

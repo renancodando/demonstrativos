@@ -2,16 +2,16 @@
 
 // Static site: contact and location work without a backend or database.
 const business = {
-  name: 'Francisco Assistência Técnica de Celulares',
+  name: 'Master Tech - Conserto de Celular',
   whatsapp: '',
-  phone: 'WhatsApp a confirmar',
-  address: 'Endereço a confirmar com a empresa',
-  mapAddress: 'Endereço a confirmar com a empresa',
+  phone: '(54) 99341-4767 (telefone)',
+  address: 'Av. São Roque, 563 - sala 3, Universitário, Bento Gonçalves - RS, 95705-218',
+  mapAddress: 'Av. São Roque, 563 - sala 3, Universitário, Bento Gonçalves - RS, 95705-218',
   timeZone: 'America/Sao_Paulo'
 };
 const mapsQuery = encodeURIComponent(business.mapAddress);
 document.querySelectorAll('[data-map-route]').forEach(link => {
-  link.href = business.whatsapp ? 'https://www.google.com/maps/search/?api=1&query=' + mapsQuery : '#localizacao';
+  link.href = 'https://www.google.com/maps/search/?api=1&query=' + mapsQuery;
 });
 document.querySelector('.contact-number').href = business.whatsapp ? `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Olá, ${business.name}! Gostaria de informações sobre os serviços.`)}` : '#diagnosis-form';
 
@@ -162,7 +162,7 @@ document.querySelectorAll('[data-open]').forEach(button => button.addEventListen
   const action = button.dataset.open;
   if (action === 'location') {
     selectedService = '';
-    showDetail({ title: 'Localização a confirmar', description: 'O endereço e o horário de atendimento serão informados pela empresa.', icon: 'pin' }, button, true);
+    showDetail({ title: 'Bento Gonçalves - RS', description: 'Atendimento no bairro Universitário. Horários sob consulta.', icon: 'pin' }, button, true);
     return;
   }
   if (action === 'diagnosis') {
@@ -208,7 +208,7 @@ form.addEventListener('submit', event => {
   feedback.querySelector('.manual-copy')?.remove();
   feedback.hidden = false;
   if (url) window.open(url, '_blank', 'noopener,noreferrer');
-  form.dispatchEvent(new CustomEvent('Francisco Assistência Técnica de Celulares:diagnosis', { bubbles: true, detail: data }));
+  form.dispatchEvent(new CustomEvent('Master Tech - Conserto de Celular:diagnosis', { bubbles: true, detail: data }));
   feedback.scrollIntoView({ block: 'nearest', behavior: 'auto' });
 });
 form.addEventListener('input', event => {

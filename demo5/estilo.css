@@ -250,7 +250,7 @@ ul,ol{list-style:none}
 .revelar.visivel{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.revelar{opacity:1;transform:none;transition:none}*,*:before,*:after{animation:none!important}}
 
-/* RNCWEB · marca EJP */
+/* RNCWEB · marca MT */
 .marca-ejp{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.1;color:#fff;min-width:0}
 .marca-ejp strong{font-family:"Inter AT",system-ui,sans-serif;font-size:30px;line-height:1;font-weight:900;letter-spacing:-.07em;font-style:italic;color:#ff8d35;text-shadow:0 0 16px #ff751854}
 .marca-ejp small{display:block;margin-top:5px;font-size:6.8px;line-height:1.3;letter-spacing:.09em;font-weight:600;color:#f3f6f7}

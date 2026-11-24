@@ -1,17 +1,17 @@
 /* Configuração central do site. Troque os textos e dados da empresa aqui. */
 window.configuracaoEmpresa = {
-  marca: { nome: "Francisco", subtitulo: "Assistência Técnica de Celulares" },
-  nomeEmpresa: "Francisco Assistência Técnica de Celulares",
+  marca: { nome: "Master Tech", subtitulo: "Assistência Técnica de Celulares" },
+  nomeEmpresa: "Master Tech - Conserto de Celular",
 
   // Número real com DDI e DDD, só dígitos (ex.: 5567999999999). Vazio = contato desativado com aviso.
   whatsapp: "",
   mensagemPadrao: "Olá! Vim pelo site e gostaria de um orçamento de reparo.",
 
   endereco: {
-    rua: "Endereço a confirmar",
-    cidade: "Localização a confirmar",
+    rua: "Av. São Roque, 563 - sala 3",
+    cidade: "Bento Gonçalves - RS",
     referencia: "Confirme o horário antes de visitar",
-    linkMapa: "https://www.google.com/maps/search/?api=1&query=Av.+Brasil%2C+568%2C+localização a confirmar%2C+SC",
+    linkMapa: "https://www.google.com/maps/search/?api=1&query=Av.%20S%C3%A3o%20Roque%2C%20563%20-%20sala%203%2C%20Universit%C3%A1rio%2C%20Bento%20Gon%C3%A7alves%20-%20RS%2C%2095705-218",
   },
   horarios: [
     ["Segunda a sexta", "Horário a confirmar"],
@@ -21,7 +21,7 @@ window.configuracaoEmpresa = {
   email: "",
 
   inicio: {
-    sobretitulo: "Francisco · Assistência em celulares",
+    sobretitulo: "Master Tech · Assistência em celulares",
     tituloLinha1: "Seu celular,",
     tituloLinha2: "sempre pronto",
     descricaoLinha1: "Manutenção e assistência para celulares e",

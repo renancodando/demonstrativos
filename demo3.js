@@ -227,7 +227,7 @@
     const failed = names('falha'), passed = names('ok');
     if (!d.aparelho && !d.defeitos.length && !d.detalhes && !d.nome && !failed.length && !passed.length) return '';
 
-    const lines = [`Olá, Francisco Assistência Técnica de Celulares!${d.nome ? ` Meu nome é ${d.nome}.` : ''}`];
+    const lines = [`Olá, Master Tech - Conserto de Celular!${d.nome ? ` Meu nome é ${d.nome}.` : ''}`];
     lines.push(d.aparelho ? `Quero um orçamento para o meu ${d.aparelho}.` : 'Quero um orçamento para o meu celular.');
     if (d.defeitos.length) {
       lines.push('', 'O que está acontecendo:');

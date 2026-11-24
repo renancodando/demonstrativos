@@ -43,8 +43,8 @@
     if (selectedFrame && !selectedFrame.getAttribute('src')) selectedFrame.src = selectedFrame.dataset.src;
     document.body.dataset.view = view;
     document.title = view === 'home'
-      ? 'Francisco Assistência Técnica de Celulares | Demonstrações RNCWeb'
-      : 'Francisco Assistência Técnica de Celulares | Demonstrativo ' + view + ' — RNCWeb';
+      ? 'Master Tech - Conserto de Celular | Demonstrações RNCWeb'
+      : 'Master Tech - Conserto de Celular | Demonstrativo ' + view + ' — RNCWeb';
 
     document.querySelectorAll('.toolbar-tab').forEach(button => {
       const selected = button.dataset.go === view;
@@ -138,7 +138,7 @@
     const details = detailsField.value.trim();
 
     const message = [
-      'Olá, Francisco Assistência Técnica de Celulares! Encontrei a loja pelo site e gostaria de mais informações.',
+      'Olá, Master Tech - Conserto de Celular! Encontrei a loja pelo site e gostaria de mais informações.',
       '',
       'Assunto: ' + service,
       device ? 'Aparelho: ' + device : '',
@@ -147,7 +147,7 @@
       'Podem me ajudar?'
     ].filter((line, index, arr) => line !== '' || (index > 0 && arr[index - 1] !== '')).join('\n');
 
-    if (!PHONE_NUMBER) { quoteDialog.close(); toast('O WhatsApp do Francisco será ativado após confirmar o número.'); return; }
+    if (!PHONE_NUMBER) { quoteDialog.close(); toast('O WhatsApp da Master Tech será ativado após confirmar o número.'); return; }
     const whatsappUrl = 'https://wa.me/' + PHONE_NUMBER + '?text=' + encodeURIComponent(message);
     // Navegação ocorre somente depois da ação voluntária do visitante, não há envio automático.
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');

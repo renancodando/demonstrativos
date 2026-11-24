@@ -1,9 +1,9 @@
 {
-  "name": "rncweb-francisco-demonstrativos",
+  "name": "rncweb-master-tech-demonstrativos",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Cinco modelos de site para Francisco Assistência Técnica de Celulares",
+  "description": "Cinco modelos de site para Master Tech - Conserto de Celular",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "vite --host 0.0.0.0 --port 5173"
